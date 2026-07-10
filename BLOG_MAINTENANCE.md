@@ -1,6 +1,6 @@
-# Blog Maintenance Guide
+# 개발기록 Maintenance Guide
 
-이 문서는 `cora1022.github.io/blog` 블로그를 다음 작업에서도 이어서 관리하기 위한 메모입니다.
+이 문서는 `cora1022.github.io/blog` 개발기록 페이지를 다음 작업에서도 이어서 관리하기 위한 메모입니다.
 
 ## 저장소 정보
 
@@ -33,7 +33,7 @@ blog/
 
 ## 디자인 방향
 
-- 종이 질감의 독립 블로그로 유지한다.
+- 종이 질감의 독립 개발기록 페이지로 유지한다.
 - 폰트는 Google Fonts의 `Gowun Batang`, `Gowun Dodum`을 사용한다.
 - 포트폴리오 메인으로 이어지는 링크는 넣지 않는다.
 - 상단 오른쪽에는 GitHub 아이콘과 `cora1022`만 둔다.
@@ -93,7 +93,7 @@ blog/
 
 주의:
 
-- 블로그에 올리는 코드는 주석을 제거한 버전으로 유지한다.
+- 개발기록에 올리는 코드는 주석을 제거한 버전으로 유지한다.
 - 원본 파일은 `Downloads`에 있을 수 있지만, 배포되는 파일은 `assets/code/` 안의 사본이다.
 - 코드 버튼은 CSS에서 `</>` 아이콘으로 보이도록 처리한다.
 
@@ -136,7 +136,7 @@ git status --short
 
 ```powershell
 git add -A
-git commit -m "Update blog"
+git commit -m "Update development log"
 git push origin main
 gh api repos/cora1022/blog/pages --jq '{html_url, status, source}'
 ```
@@ -155,4 +155,3 @@ gh api repos/cora1022/blog/pages --jq '{html_url, status, source}'
 - NYPC 글 상단에 마스터트랙과 NEXT NATION 룰 설명 서론 추가
 - 설명 영상 링크 추가: `https://www.youtube.com/watch?v=BnExruRtP1A&t=114s`
 - `About Creative` 메타 문구 제거
-
