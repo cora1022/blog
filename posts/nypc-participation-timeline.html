@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYPC 참가 타임라인 - cora1022 개발기록</title>
+  <meta name="description" content="NYPC NEXT NATION 예선 참가 과정을 날짜별 타임라인으로 정리한 기록입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/blog.css">
+  <script defer src="../assets/js/video-modal.js"></script>
+</head>
+<body class="article-page">
+  <header class="site-header">
+    <a class="github-brand" href="https://github.com/cora1022" rel="noreferrer" target="_blank" aria-label="cora1022 GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 .7a11.3 11.3 0 0 0-3.57 22c.57.1.78-.25.78-.55v-2.16c-3.18.69-3.85-1.35-3.85-1.35-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.52-2.54-.29-5.21-1.27-5.21-5.64 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.03 0 0 .96-.31 3.14 1.17a10.86 10.86 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.07 0 4.38-2.68 5.35-5.23 5.63.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/>
+      </svg>
+      <span>cora1022</span>
+    </a>
+  </header>
+
+  <main>
+    <article class="paper-panel article">
+      <header class="article-header">
+        <p class="eyebrow">NYPC Master Qualification Round Replay</p>
+        <h1>NYPC 참가 타임라인</h1>
+        <div class="article-meta">
+          <time datetime="2026-07-08">2026.07.08</time>
+          <span>About Creative</span>
+          <span>NEXT NATION</span>
+        </div>
+      </header>
+
+      <div class="article-content">
+        <p>예선 기간 동안 우리 팀은 RTS 형태의 게임 규칙을 분석하고, 여러 전략 봇을 만들고, 중간 평가 로그를 다시 읽으며 계속 방향을 바꿨다. 이 글은 그 과정을 날짜별로 남긴 참가 타임라인이다.</p>
+
+        <section class="timeline" aria-label="NYPC 참가 타임라인">
+          <article class="timeline-entry">
+            <time datetime="2026-06-29">6/29</time>
+            <div>
+              <h2>룰 분석과 첫 전략 분화</h2>
+              <p>NEXT NATION에 대한 이해도가 낮았기 때문에 첫날은 핵심 룰 분석에 집중했다. 이후 각자의 LLM에 룰을 입력하고, 경제형 전략, 성장형 전략, 러시 전략처럼 서로 다른 방향의 봇을 만들기 시작했다.</p>
+              <p>거점 수 차이가 누적 금화 차이로 이어진다는 점, 정중앙 거점의 중요성, 건물 방어가 상대적 금화 이득을 만든다는 점을 확인했다. 기지 건설 후 흑자 전환 시점을 기준으로 상대 기지를 파괴하는 전략도 구상했다.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-06-30">6/30</time>
+            <div>
+              <h2>첫 8승 봇과 로그 분석 방식의 변화</h2>
+              <p>중간 평가 로그를 참고하며 넥슨 봇 상대 8승을 첫 목표로 잡았다. 초반 거점 확보, 상대 기지 탈취, 유동적인 수비를 실험했고, 건물 하나와 전사 한 명이 있는 거점은 전사 세 명으로 점령 가능하다는 사실을 전략에 반영했다.</p>
+              <div class="submission-card">
+                <strong>#32620</strong>
+                <span>6월 30일 오후 3시</span>
+                <p>상대의 전투 병력 머릿수와 도착 턴을 기준으로 수비를 조정하는 경제형 봇을 제출했다. 공격 시에는 건물 레벨과 상주 병력을 금화 가치로 환산해 판단했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/32620.cpp" download aria-label="#32620 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#32620 실행 영상" data-video-url="https://youtu.be/u1oa255PkIc" aria-label="#32620 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <div class="submission-card">
+                <strong>#35107</strong>
+                <span>6월 30일 오후 8시</span>
+                <p>Codex에게 단순히 모델 제작을 맡기는 방식은 WA와 이상 동작을 만들었다. 이후 룰과 로그 해석법을 마크다운으로 정리하고, 직접 로그의 턴과 문제점을 지적하는 방식으로 성능을 개선했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/35107.cpp" download aria-label="#35107 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#35107 실행 영상" data-video-url="https://youtu.be/IdIb3GAVyTU" aria-label="#35107 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-01">7/1</time>
+            <div>
+              <h2>내부 테스트와 방어 로직 실험</h2>
+              <p>러시 모델에 대한 저항성을 높이기 위해 내부 CLI 테스트를 본격적으로 활용했다. 서로의 봇끼리 대전하며 넥슨 봇 상대에서는 얻기 어려웠던 패배 원인을 수집했고, 맵 크기에 따른 승률 변화도 확인했다.</p>
+              <div class="submission-card">
+                <strong>#40655</strong>
+                <span>7월 1일 오후 1시</span>
+                <p>경제형 봇이 상대 전사의 합류를 인지하지 못하는 문제를 해결하기 위해 매 턴 상대 거점 주변 한 칸의 전투력을 합산했다. 중간 평가에서는 557팀 중 21위를 기록했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/40655.cpp" download aria-label="#40655 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#40655 실행 영상" data-video-url="https://youtu.be/dRQTCS7ou3M" aria-label="#40655 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-02">7/2</time>
+            <div>
+              <h2>외곽 공격과 상위권 전략 재해석</h2>
+              <p>상위권 팀의 전략을 관찰하며, 중앙에 병력을 모은 뒤 밀도가 낮은 외곽 거점을 순회하며 타격하는 모델을 개발했다. 동시에 초반 2거점 후 전사 5명을 모아 공격하는 전략을 벤치마킹했다.</p>
+              <div class="submission-card">
+                <strong>#47806</strong>
+                <span>7월 2일 오전 3시</span>
+                <p>기존 경제형 봇의 장점을 살리면서 상대 진영 외곽을 공격하는 모델을 제출했다. LLM이 기존 로직을 그대로 가져오는 한계를 느끼며, 지휘체계를 직접 이해하고 신중히 코드를 추가했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/47806.cpp" download aria-label="#47806 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#47806 실행 영상" data-video-url="https://youtu.be/S6ENXrdj-ic" aria-label="#47806 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <div class="submission-card">
+                <strong>#49903</strong>
+                <span>7월 2일 오후 12시</span>
+                <p>목표 고정, 집결 기준, 초반 병력 생산 속도를 수정했다. 한 목표에 병력을 집중해 상대 본부에 압박을 가하는 방향으로 개선했고, 팀 내 최고 성적인 15위를 기록했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/49903.cpp" download aria-label="#49903 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#49903 실행 영상" data-video-url="https://youtu.be/5yHiFvg-ekA" aria-label="#49903 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-03">7/3</time>
+            <div>
+              <h2>객체지향 컨트롤러와 유지보수 문제</h2>
+              <p>상위권 로그를 확보하면서 기존 바이브 코딩 기반 봇의 허술함이 드러났다. 조건문을 계속 덧대는 방식 대신 관측, 경제, 공격, 방어 시스템을 나누는 객체지향 컨트롤러 개념을 적용하기 시작했다.</p>
+              <div class="submission-card">
+                <strong>#58894</strong>
+                <span>7월 3일 오후 1시</span>
+                <p>경제형 봇 개선 버전이 700팀 중 32위를 기록했다. 그러나 금화 사용 로직이 충돌하며 WA가 발생했고, 공격/방어 로직의 함수화를 시도했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/58894.cpp" download aria-label="#58894 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#58894 실행 영상" data-video-url="https://youtu.be/KVw25dulrV0" aria-label="#58894 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <div class="submission-card">
+                <strong>#62539</strong>
+                <span>7월 3일 오후 8시</span>
+                <p>관측 시스템, 경제 시스템, 공격 및 방어 시스템을 분리한 컨트롤러 모델을 제출했다. 로그 기반 개선을 거쳐 19위에 도달했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/62539.cpp" download aria-label="#62539 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#62539 실행 영상" data-video-url="https://youtu.be/4rEVLOkYw14" aria-label="#62539 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-04">7/4</time>
+            <div>
+              <h2>갈라파고스화</h2>
+              <p>내부 테스트를 반복하면서 개선 방향이 내부 봇에게만 유리하게 흘렀다. 경제형 봇은 한때 상위권을 유지했지만, 4일 15시 중간 평가에서 747팀 중 115위로 크게 하락했다.</p>
+              <div class="submission-card">
+                <strong>#67492</strong>
+                <span>7월 4일 오전 11시</span>
+                <p>WA를 해결하고 내부 테스트에서 좋은 결과를 냈지만, 실제 중간 평가와는 다른 결과가 나왔다. 내부 테스트에 과하게 맞춰진 로직을 제거하기로 결정했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/67492.cpp" download aria-label="#67492 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#67492 실행 영상" data-video-url="https://youtu.be/mfugsXZlfJg" aria-label="#67492 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <p>이 시점의 키워드는 갈라파고스였다. 고립된 내부 테스트 환경이 독특한 생태계를 만들었고, 그 안에서만 강한 봇이 되어가고 있었다.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-05">7/5</time>
+            <div>
+              <h2>전략 선택과 러시형 봇의 마지막 개선</h2>
+              <p>팀 내부 회의 끝에 내부 테스트에 대한 맹신을 줄이고, 남은 중간 평가를 통해 실제 로그를 수집하기로 했다. 오전, 오후, 밤 평가에서 각 봇의 한계가 드러났고, 포기할 전략과 밀어붙일 전략을 구분해야 했다.</p>
+              <div class="submission-card">
+                <strong>#77166</strong>
+                <span>7월 5일 오후 3시</span>
+                <p>러시형 봇의 최종 수정 버전이다. 상대 본진에 가까운 거점을 먼저 파괴하면 승률이 상승한다는 로그를 바탕으로 목표 산정 기준을 조정했고, 833팀 중 48위를 기록했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/77166.cpp" download aria-label="#77166 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#77166 실행 영상" data-video-url="https://youtu.be/_AIbUwP-_ZE" aria-label="#77166 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <div class="submission-card">
+                <strong>#80882</strong>
+                <span>7월 5일 오후 11시</span>
+                <p>초반 중앙 거점 확장과 병력 집결 후 본진 공격을 원칙으로 한 급습 전략을 제출했다. 방어 로직에서는 본부와 근처 거점 경보가 중첩되어 병력이 분산되는 문제가 있었다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/80882.cpp" download aria-label="#80882 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#80882 실행 영상" data-video-url="https://youtu.be/E3wvSn1mFn0" aria-label="#80882 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-06">7/6</time>
+            <div>
+              <h2>방어 경로 예측의 한계</h2>
+              <p>급습 전략은 방어 로직을 개선해 오전 중간 평가에서 826팀 중 99위를 기록했다. 하지만 상대의 최종 도착 지점을 정확히 특정하지 못하는 문제는 계속 남았다.</p>
+              <p>다익스트라 알고리즘을 활용해 방어 경로 예측을 시도했지만, 분기점 이전에는 목표를 확신할 수 없는 상황이 많았다. 결국 모든 상황을 완벽히 예측하는 것은 운의 영역이 섞인 문제라고 판단했다.</p>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-07">7/7</time>
+            <div>
+              <h2>경제형 봇으로 다시 기회가 열리다</h2>
+              <p>러시형 봇이 48위에서 217위로 떨어지며 다시 위기를 맞았다. 그러나 내부 테스트로 오염되기 전 버전으로 돌아가 개선한 경제형 봇이 876팀 중 11위를 기록하면서 팀은 다시 경제형 봇에 집중하기로 했다.</p>
+              <div class="submission-card">
+                <strong>#94157</strong>
+                <span>7월 7일 오후 2시</span>
+                <p>경제형 봇은 방어 우선순위가 업그레이드 로직을 삼키는 문제가 있었다. 방어 로직을 정리하고 다익스트라 기반 경로 예측만 남기는 방향으로 개선했다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/94157.cpp" download aria-label="#94157 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#94157 실행 영상" aria-label="#94157 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <time datetime="2026-07-08">7/8</time>
+            <div>
+              <h2>최종 제출</h2>
+              <p>11위를 기록했던 버전을 다시 제출했을 때는 28위로 하락했다. 최종 평가는 상위 100팀이 여러 번 대결하기 때문에, 더 안정적인 버전이 필요하다고 판단했다.</p>
+              <div class="submission-card">
+                <strong>#104693</strong>
+                <span>7월 8일 오후 2시</span>
+                <p>다익스트라 기반 공격 목표 예측을 도입한 모델을 제출했다. 오후 9시 중간 평가에서는 84위를 기록했지만, 패배 원인이 본부 레벨 차이로 명확히 좁혀졌다.</p>
+                <div class="submission-actions">
+                  <a class="submission-action" href="../assets/code/104693.cpp" download aria-label="#104693 코드 다운로드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h2ZM5 19h14v2H5v-2Z"/></svg></a>
+                  <button class="submission-action youtube-action" type="button" data-video-title="#104693 실행 영상" aria-label="#104693 실행 영상 보기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.9 12 4.9 12 4.9s-6 0-7.7.4a2.7 2.7 0 0 0-1.9 1.9A28.2 28.2 0 0 0 2 12a28.2 28.2 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.4 7.7.4 7.7.4s6 0 7.7-.4a2.7 2.7 0 0 0 1.9-1.9A28.2 28.2 0 0 0 22 12a28.2 28.2 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1L10 15.1Z"/></svg></button>
+                </div>
+              </div>
+              <p>마지막에는 본부 업그레이드 로직을 수정해 최종 제출 버전을 만들고 대회를 마무리했다.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="note-box" aria-labelledby="after-note">
+          <h2 id="after-note">후기</h2>
+          <p>게임에 대한 관심, RTS 전략 수립, 로그라는 객관적 데이터를 통한 분석은 다른 공모전에서 찾기 힘든 재미였다. 가장 아쉬웠던 점은 제한된 중간 평가 횟수 안에서 네 명이 각자의 전략을 충분히 검증하기 어려웠다는 점이다.</p>
+          <p>내부 테스트의 갈라파고스화도 큰 교훈이었다. 내부 봇에게만 강한 방향으로 개선되면 실제 평가에서는 무너질 수 있었다. 다시 기회가 온다면 전략 수를 줄이고, 취약한 상대를 재현해 완성도를 높이는 방식으로 접근할 것이다.</p>
+          <p>LLM은 유용했지만 한계도 분명했다. 추상적인 요구는 의도와 다른 구현으로 이어졌고, 충돌하는 로직을 끝까지 찾아내는 일은 결국 사용자의 몫이었다. 동시에 반복적인 수정 끝에 원하는 결과에 가까워질 수 있다는 점에서 LLM의 양면성을 크게 느꼈다.</p>
+        </section>
+      </div>
+      <footer class="article-actions">
+        <a class="text-link" href="../">블로그 메인</a>
+      </footer>
+    </article>
+  </main>
+  <dialog class="video-dialog" data-video-dialog aria-labelledby="video-dialog-title">
+    <div class="video-dialog-panel">
+      <header>
+        <h2 id="video-dialog-title">실행 영상</h2>
+        <button type="button" class="video-dialog-close" data-video-close aria-label="모달 닫기">×</button>
+      </header>
+      <div class="video-frame" data-video-frame>
+        <p>영상 링크를 추후 업데이트할 예정입니다.</p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
